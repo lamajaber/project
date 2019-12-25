@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="18dp"
+>
+
+
+        <ImageView
+            android:id="@+id/imgRowNotebook"
+            android:layout_width="wrap_content"
+            android:layout_height="135dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/notebook" />
+
+        <TextView
+            android:id="@+id/txtNameRowNotebook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgRowNotebook"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="11dp"
+            android:text="Weekend Plans"
+            android:textColor="#4A4A4A"
+            android:textSize="15dp"/>
+
+
+    </RelativeLayout>

@@ -49,23 +49,42 @@ You’ve been missed"
         android:textSize="24dp"
         android:textStyle="bold" />
 
-    <EditText
+
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/editI_email"
         android:layout_width="375dp"
         android:layout_height="60dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="28dp"
-        android:hint="Enter your email address"
-        android:padding="20dp" />
+        app:errorEnabled="true">
 
-    <EditText
+        <com.google.android.material.textfield.TextInputEditText
+            android:hint="Enter your Email"
+            android:textColorHint="#a3a1a1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:padding="5dp"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/editI_pass"
         android:layout_width="375dp"
         android:layout_height="60dp"
         android:layout_marginLeft="20dp"
         android:hint="Enter your password"
         android:inputType="numberPassword"
-        android:padding="20dp" />
+        app:errorEnabled="true">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:hint="Enter your password"
+        android:padding="5dp"
+        android:textColorHint="#a3a1a1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:inputType="numberPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
 
 
     <TextView

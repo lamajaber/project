@@ -3,6 +3,7 @@ package com.example.notes.Model;
 public class NoteBook {
     private String titile;
     private int imge;
+    private int imgCh;
 
     public NoteBook() {
     }
@@ -12,6 +13,11 @@ public class NoteBook {
         this.imge = imge;
     }
 
+    public NoteBook(String titile, int imge, int imgCh) {
+        this.titile = titile;
+        this.imge = imge;
+        this.imgCh = imgCh;
+    }
 
     public String getTitile() {
         return titile;

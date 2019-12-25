@@ -61,7 +61,7 @@ public class SliderAdapterNote extends SliderViewAdapter<SliderAdapterNote.Slide
     }
 
 
-    class SliderAdapterVH extends SliderAdapterNote.ViewHolder {
+    class SliderAdapterVH extends SliderViewAdapter.ViewHolder {
 
         private View itemView;
         private ImageView img;

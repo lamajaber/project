@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".Activity.HomePage">
+
+    <ImageView
+        android:id="@+id/imgColorHome"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="53dp"
+        android:src="@drawable/regcolor" />
+
+    <TextView
+        android:id="@+id/txtEditAccent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="56dp"
+        android:layout_marginRight="18dp"
+        android:text="Edit"
+        android:textColor="#7B1E58"
+        android:textSize="17dp" />
+
+    <TextView
+        android:id="@+id/Browse"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgColorHome"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="13dp"
+        android:text="Browse"
+        android:textColor="@android:color/black"
+        android:textSize="34dp" />
+
+
+    <ImageView
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Browse"
+        android:layout_marginLeft="18.5dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="17.5dp"
+        android:background="@drawable/line" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="13dp"
+        android:text="Notebooks"
+        android:textColor="#000000"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/ShowAll_Notebooks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="13dp"
+        android:layout_marginRight="15dp"
+        android:text="Show All"
+        android:textColor="#7B1E58"
+        android:textSize="16dp" />
+
+
+    <ImageView
+        android:id="@+id/imgAddNotebook"
+        android:layout_width="100dp"
+        android:layout_height="130dp"
+        android:layout_below="@+id/ShowAll_Notebooks"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="18dp"
+        android:onClick="imgAddNotebook"
+        android:scaleType="centerCrop"
+        android:src="@drawable/addnotebook" />
+
+    <TextView
+        android:id="@+id/txtAddNotebook"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgAddNotebook"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="11dp"
+        android:text="Create Notebook"
+        android:textAlignment="center"
+        android:textColor="#4A4A4A"
+        android:textSize="15dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RV_Notebooks"
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:layout_below="@+id/ShowAll_Notebooks"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginRight="8dp"
+        android:layout_toRightOf="@+id/imgAddNotebook"
+        android:orientation="horizontal"
+
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/row_notbook" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/RV_Notebooks"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="17dp"
+        android:text="Notes"
+        android:textColor="#000000"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/ShowAll_Notes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/RV_Notebooks"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="22dp"
+        android:layout_marginRight="17dp"
+        android:text="Show All"
+        android:textColor="#7B1E58"
+        android:textSize="16dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RV_Notes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ShowAll_Notes"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="8dp"
+        tools:listitem="@layout/row_note" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="58dp"
+        android:layout_height="58dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="17dp"
+        android:layout_marginBottom="17dp"
+        android:src="@drawable/ic_addd" />
+
+</RelativeLayout>

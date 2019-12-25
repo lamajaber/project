@@ -18,21 +18,42 @@ import com.smarteist.autoimageslider.SliderView;
 public class NotebookTutorialActivity extends AppCompatActivity {
 
 
-    SharedPreferences.Editor editor;
-    SharedPreferences prefs;
+    private SharedPreferences preferences;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.notebook_tutorial);
-        prefs = getSharedPreferences("sss", MODE_PRIVATE);
 
-        if (prefs.getBoolean("name", false)) {
-            startActivity(new Intent(getApplicationContext(), SplashActivity.class));
-            NotebookTutorialActivity.this.finish();
+
+        preferences = getSharedPreferences("userInfo", MODE_PRIVATE);
+
+        if (preferences.getBoolean("is_logged_in", false)) {
+            Intent intent = new Intent(getApplicationContext(), SplashActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
         }
 
+        sliderView();
 
+
+        findViewById(R.id.btn_nextSplash).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SharedPreferences.Editor editor = preferences.edit();
+
+                editor.apply();
+                Intent intent = new Intent(getApplicationContext(), SplashActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
+            }
+        });
+
+
+    }
+
+    private void sliderView(){
         SliderView sliderView = findViewById(R.id.imageSlider);
         SliderAdapterNote adapter = new SliderAdapterNote(getApplicationContext());
         sliderView.setSliderAdapter(adapter);
@@ -48,26 +69,17 @@ public class NotebookTutorialActivity extends AppCompatActivity {
             @Override
             public void run() {
 
-                editor = getSharedPreferences("sss", MODE_PRIVATE).edit();
-                editor.putBoolean("key", true);
+                SharedPreferences.Editor editor = preferences.edit();
+                editor.putBoolean("is_logged_in", true);
                 editor.apply();
 
-                startActivity(new Intent(getApplicationContext(), SplashActivity.class));
+                Intent intent = new Intent(getApplicationContext(), SplashActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
                 NotebookTutorialActivity.this.finish();
-
 
             }
         }, 13000);
-
-
-        findViewById(R.id.btn_nextSplash).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), SplashActivity.class);
-                startActivity(intent);
-            }
-        });
-
 
     }
 
