@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ForgotPassActivity">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="30dp"
+            android:src="@drawable/ic_back" />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginRight="53dp"
+        android:text="Forgot password"
+        android:textStyle="bold"
+        android:textColor="#1A1824"
+        android:textSize="24dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginRight="53dp"
+        android:text="Enter your email and we’ll send you
+instructions on how to reset your password"
+        android:textColor="#1A1824"
+        android:textSize="16dp" />
+
+    <EditText
+        android:id="@+id/EditF_email"
+        android:layout_width="375dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="28dp"
+        android:hint="Enter your email address"
+        android:padding="20dp" />
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="162dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/button"
+        android:text="Recover password"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="16dp" />
+
+    <TextView
+        android:onClick="goEmail"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="90dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="80dp"
+        android:text="Go Email"
+        android:textAlignment="center"
+        android:textColor="#1A1824"
+        android:textSize="14dp" />
+</LinearLayout>
