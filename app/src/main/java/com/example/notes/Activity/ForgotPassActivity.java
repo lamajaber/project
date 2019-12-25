@@ -1,4 +1,4 @@
-package com.example.notes;
+package com.example.notes.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,6 +6,9 @@ import android.view.View;
 import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.notes.Activity.ConfirmMessageActivity;
+import com.example.notes.R;
 
 public class ForgotPassActivity extends AppCompatActivity {
 

@@ -1,10 +1,14 @@
-package com.example.notes;
+package com.example.notes.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.notes.Activity.SignInActivity;
+import com.example.notes.Activity.SignUpActivity;
+import com.example.notes.R;
 
 public class SplashActivity extends AppCompatActivity {
 

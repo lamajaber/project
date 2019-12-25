@@ -1,4 +1,4 @@
-package com.example.notes;
+package com.example.notes.Activity;
 
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
@@ -8,6 +8,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.notes.R;
 
 
 public class SignInActivity extends AppCompatActivity {

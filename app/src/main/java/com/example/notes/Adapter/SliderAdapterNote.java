@@ -1,4 +1,4 @@
-package com.example.notes;
+package com.example.notes.Adapter;
 
 import android.content.Context;
 import android.text.Spannable;
@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.notes.R;
 import com.smarteist.autoimageslider.SliderViewAdapter;
 
 
@@ -60,7 +61,7 @@ public class SliderAdapterNote extends SliderViewAdapter<SliderAdapterNote.Slide
     }
 
 
-    class SliderAdapterVH extends ViewHolder {
+    class SliderAdapterVH extends SliderAdapterNote.ViewHolder {
 
         private View itemView;
         private ImageView img;

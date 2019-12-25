@@ -1,10 +1,12 @@
-package com.example.notes;
+package com.example.notes.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.notes.R;
 
 public class ConfirmMessageActivity extends AppCompatActivity {
 

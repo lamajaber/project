@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/img_tutorial"
+        android:layout_width="616dp"
+        android:layout_height="511dp"
+        android:layout_marginLeft="-105dp"
+        android:layout_marginTop="-97dp"
+        android:layout_marginRight="-110dp"
+        android:scaleType="center"
+        android:src="@drawable/tutorial" />
+
+    <TextView
+        android:id="@+id/name_tutorial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="125.5dp"
+        android:layout_marginTop="59dp"
+        android:layout_marginRight="125.5dp"
+        android:text="Notebooks"
+        android:textColor="#7B1E58"
+        android:textSize="26dp" />
+
+    <TextView
+        android:id="@+id/dec_tutorial"
+        android:layout_width="239dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:layout_marginLeft="125.5dp"
+        android:layout_marginTop="59dp"
+        android:layout_marginRight="125.5dp"
+        android:text="Notebooks are the best place to manage your Notes "
+        android:textColor="#9B9FAA"
+        android:textSize="18dp" />
+
+</LinearLayout>
