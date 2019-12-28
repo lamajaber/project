@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginBottom="43dp"
+    tools:context=".SignIn_Up.NotebookTutorialActivity">
+
+    <com.smarteist.autoimageslider.SliderView
+        android:id="@+id/imageSlider"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        app:sliderAnimationDuration="600"
+        app:sliderAutoCycleDirection="back_and_forth"
+        app:sliderAutoCycleEnabled="true"
+        app:sliderCircularHandlerEnabled="true"
+        app:sliderIndicatorAnimationDuration="600"
+        app:sliderIndicatorGravity="center_horizontal|bottom"
+        app:sliderIndicatorMargin="15dp"
+        app:sliderIndicatorOrientation="horizontal"
+        app:sliderIndicatorPadding="3dp"
+        app:sliderIndicatorRadius="2dp"
+        app:sliderIndicatorSelectedColor="#7B1E58"
+        app:sliderIndicatorUnselectedColor="#BBB4B8"
+        app:sliderScrollTimeInSec="1"
+        app:sliderStartAutoCycle="true" />
+
+    <Button
+        android:id="@+id/btn_nextSplash"
+        android:layout_marginRight="17dp"
+        android:layout_width="99dp"
+        android:layout_height="42dp"
+        android:layout_alignRight="@+id/imageSlider"
+        android:layout_alignBottom="@+id/imageSlider"
+        android:background="@drawable/btn_next"
+        android:textColor="@android:color/white"
+        android:textAllCaps="false"
+        android:text="Next" />
+
+    <TextView
+        android:layout_marginBottom="18dp"
+        android:layout_marginLeft="16dp"
+        android:textColor="#9B9B9B"
+        android:textSize="16dp"
+        android:layout_alignLeft="@+id/imageSlider"
+        android:layout_alignBottom="@+id/imageSlider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Skip" />
+
+</RelativeLayout>
