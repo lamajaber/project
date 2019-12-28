@@ -2,19 +2,42 @@ package com.example.notes.Model;
 
 public class Note {
 
-   private String title,Description, date;
-   private int color;
+    private String id;
+    private int img;
+    private String date, title, dec;
 
-    public Note(String title, String description, String date, int color) {
-        this.title = title;
-        Description = description;
+
+
+
+    public Note(String id, int mark, String date, String title, String dec) {
+        this.id = id;
+        this.img = mark;
         this.date = date;
-        this.color = color;
+        this.title = title;
+        this.dec = dec;
     }
 
-    public Note(String title, String description, String date) {
-        this.title = title;
-        Description = description;
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public int getImg() {
+        return img;
+    }
+
+    public void setImg(int mark) {
+        this.img = mark;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
         this.date = date;
     }
 
@@ -26,27 +49,11 @@ public class Note {
         this.title = title;
     }
 
-    public String getDescription() {
-        return Description;
+    public String getDec() {
+        return dec;
     }
 
-    public void setDescription(String description) {
-        Description = description;
-    }
-
-    public String getDate() {
-        return date;
-    }
-
-    public void setDate(String date) {
-        this.date = date;
-    }
-
-    public int getColor() {
-        return color;
-    }
-
-    public void setColor(int color) {
-        this.color = color;
+    public void setDec(String dec) {
+        this.dec = dec;
     }
 }

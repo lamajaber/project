@@ -10,21 +10,27 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".Activity.HomeActivity">
+        <activity android:name=".SignIn_Up.NotebookTutorialActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".Activity.ConfirmMessageActivity" />
-        <activity android:name=".Activity.ForgotPassActivity" />
-        <activity android:name=".Activity.SignInActivity" />
-        <activity android:name=".Activity.SignUpActivity" />
-        <activity android:name=".Activity.SplashActivity" />
-        <activity android:name=".Activity.NotebookTutorialActivity">
 
         </activity>
+        <activity android:name=".NoteBook.HomePageActivity" />
+        <activity android:name=".Add_View.ViewMyNote" />
+        <activity android:name=".Add_View.ShowAllNotes" />
+        <activity android:name=".NoteBook.ViewNoteBooks" />
+        <activity android:name=".NoteBook.AddNoteBookActivity" />
+        <activity android:name=".Add_View.ViewNotes" />
+        <activity android:name=".SignIn_Up.SplashActivity" />
+        <activity android:name=".SignIn_Up.SignUpActivity" />
+        <activity android:name=".SignIn_Up.SignInActivity" />
+
+        <activity android:name=".Add_View.AddNoteActivity" />
+        <activity android:name=".NoteBook.HomePageActivity" />
+        <activity android:name=".SignIn_Up.ForgotPassActivity" />
 
     </application>
 

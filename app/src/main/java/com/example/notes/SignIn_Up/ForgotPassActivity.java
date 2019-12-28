@@ -1,8 +1,9 @@
-package com.example.notes.Activity;
+package com.example.notes.SignIn_Up;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -10,12 +11,11 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.notes.Activity.ConfirmMessageActivity;
-import com.example.notes.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
+import com.example.notes.R;
 
 public class ForgotPassActivity extends AppCompatActivity {
 
@@ -24,14 +24,20 @@ public class ForgotPassActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.forgot_pass_activity);
+        setContentView(R.layout.activity_forget_password);
 
         txtEmail = findViewById(R.id.EditF_email);
+getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+getSupportActionBar().setDisplayShowHomeEnabled(true);
+getSupportActionBar().setTitle("Reset Password");
+
 
     }
 
     public void recoverPass(View view) {
-        resetUserPassword(txtEmail.getText().toString().trim());
+        String email = txtEmail.getText().toString().trim();
+
+        resetUserPassword(email);
     }
 
 
@@ -53,10 +59,14 @@ public class ForgotPassActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()) {
                             progressDialog.dismiss();
+                            Log.d("ddddd",task.toString());
+
                             Toast.makeText(getApplicationContext(), "Reset password instructions has sent to your email",
                                     Toast.LENGTH_SHORT).show();
                         } else {
                             progressDialog.dismiss();
+                            Log.d("ddddd","error");
+
                             Toast.makeText(getApplicationContext(),
                                     "Email don't exist", Toast.LENGTH_SHORT).show();
                         }
@@ -66,6 +76,7 @@ public class ForgotPassActivity extends AppCompatActivity {
             public void onFailure(@NonNull Exception e) {
                 progressDialog.dismiss();
                 Toast.makeText(getApplicationContext(), e.toString(), Toast.LENGTH_SHORT).show();
+                Log.d("ddddd",e.toString());
             }
         });
     }

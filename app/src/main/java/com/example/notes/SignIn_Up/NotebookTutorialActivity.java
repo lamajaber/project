@@ -1,4 +1,4 @@
-package com.example.notes.Activity;
+package com.example.notes.SignIn_Up;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -9,11 +9,11 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.notes.R;
-import com.example.notes.Adapter.SliderAdapterNote;
+import com.example.notes.Adapter_Listener.SliderAdapterNote;
 import com.smarteist.autoimageslider.IndicatorAnimations;
 import com.smarteist.autoimageslider.SliderAnimations;
 import com.smarteist.autoimageslider.SliderView;
+import com.example.notes.R;
 
 public class NotebookTutorialActivity extends AppCompatActivity {
 
@@ -24,7 +24,7 @@ public class NotebookTutorialActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.notebook_tutorial);
+        setContentView(R.layout.activity_notebook_tutorial);
 
 
         preferences = getSharedPreferences("userInfo", MODE_PRIVATE);
@@ -73,7 +73,7 @@ public class NotebookTutorialActivity extends AppCompatActivity {
                 editor.putBoolean("is_logged_in", true);
                 editor.apply();
 
-                Intent intent = new Intent(getApplicationContext(), SplashActivity.class);
+                Intent intent = new Intent(getApplicationContext(),SplashActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
                 NotebookTutorialActivity.this.finish();

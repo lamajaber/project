@@ -1,8 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimary">#FFFFFF</color>
     <color name="colorPrimaryDark">#FFFFFF</color>
     <color name="colorAccent">#7B1E58</color>
+    <color name="color1">#B4EC51</color>
+    <color name="color2">#3023AE</color>
+    <color name="color3">#F5515F</color>
+    <color name="color4">#6B40BE</color>
+    <color name="color5">#7B1E58</color>
+    <color name="color6">#D7BF6D</color>
+    <color name="color7">#79A4F6</color>
+    <color name="color8">#F76B1C</color>
+    <color name="color9">#9F4E5E</color>
+    <color name="color10">#C86DD7</color>
+    <color name="color11">#2F296D</color>
+    <color name="color12">#F5515F</color>
+
+
 
 
     <color name="primary">#7B1E58</color>
@@ -20,16 +34,6 @@
     <color name="white">#FFFFFF</color>
 
 
-    <color name="s1">#3023AE</color>
-    <color name="s2">#B4EC51</color>
-    <color name="s3">#F5515F</color>
-    <color name="s4">#3023AE</color>
-    <color name="s5">#FAD961</color>
-    <color name="s6">#7CB3FC</color>
-    <color name="s7">#8F3FB8</color>
-    <color name="s8">#AE2369</color>
-    <color name="s9">#F5515F</color>
-    <color name="s10">#0D1A2C</color>
-    <color name="s11">#F5515F</color>
-    <color name="s12">#3023AE</color>
+
 </resources>
+
