@@ -21,9 +21,9 @@
         <activity android:name=".NoteBook.HomePageActivity" />
         <activity android:name=".Add_View.ViewMyNote" />
         <activity android:name=".Add_View.ShowAllNotes" />
-        <activity android:name=".NoteBook.ViewNoteBooks" />
+        <activity android:name=".NoteBook.AllNoteBook" />
         <activity android:name=".NoteBook.AddNoteBookActivity" />
-        <activity android:name=".Add_View.ViewNotes" />
+        <activity android:name=".Add_View.AllNotes" />
         <activity android:name=".SignIn_Up.SplashActivity" />
         <activity android:name=".SignIn_Up.SignUpActivity" />
         <activity android:name=".SignIn_Up.SignInActivity" />

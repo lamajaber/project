@@ -41,8 +41,8 @@ public class AddNoteActivity extends AppCompatActivity implements View.OnClickLi
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getSupportActionBar().hide();
         setContentView(R.layout.activity_add_note);
+
         createBoteSheeteDialog();
 
         layout=findViewById(R.id.noteLayout);
@@ -178,9 +178,9 @@ public class AddNoteActivity extends AppCompatActivity implements View.OnClickLi
 
         FirebaseAuth mAuth = FirebaseAuth.getInstance();
         FirebaseUser user = mAuth.getCurrentUser();
-        String id = FirebaseDatabase.getInstance().getReference().child("User").child(user.getUid()).child("Book").child(bookId).child("Note").push().getKey();
+        String id = FirebaseDatabase.getInstance().getReference().child("User").child(user.getUid()).child("NoteBook").child(bookId).child("Note").push().getKey();
         Note note=new Note(id,color,date.getText().toString(),title.getText().toString(),txt.getText().toString());
-        FirebaseDatabase.getInstance().getReference().child("User").child(user.getUid()).child("Book").child(bookId).child("Note").child(String.valueOf(id)).setValue(note);
+        FirebaseDatabase.getInstance().getReference().child("User").child(user.getUid()).child("NoteBook").child(bookId).child("Note").child(String.valueOf(id)).setValue(note);
 
 
         this.finish();

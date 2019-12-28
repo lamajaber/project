@@ -33,7 +33,6 @@ public class ShowAllNotes extends AppCompatActivity implements NoteItemClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_all_notes);
-        getSupportActionBar().hide();
 
         notes=new ArrayList<>();
         noteRV=findViewById(R.id.notesRe);

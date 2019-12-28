@@ -91,32 +91,10 @@ public class SignUpActivity extends AppCompatActivity {
                     public void onComplete(@NonNull final Task<AuthResult> task) {
                         if (task.isSuccessful()) {
 
-                            FirebaseUser user = mAuth.getCurrentUser();
-                            String emailF = user.getEmail();
-                            String uid = user.getUid();
-                            Map<String, Object> data = new HashMap<>();
-                            data.put("uid", uid);
-                            data.put("email", emailF);
-                            data.put("createdAt", new Date().getTime());
 
-
-                            FirebaseDatabase.getInstance().getReference().child("User").child(uid).setValue(data)
-                                    .addOnFailureListener(new OnFailureListener() {
-                                        @Override
-                                        public void onFailure(@NonNull Exception e) {
-                                            Toast.makeText(SignUpActivity.this, task.getException().getLocalizedMessage(), Toast.LENGTH_SHORT).show();
-                                            Log.d("error", e.getLocalizedMessage());
-                                        }
-                                    })
-                                    .addOnSuccessListener(new OnSuccessListener<Void>() {
-                                        @Override
-                                        public void onSuccess(Void aVoid) {
-                                            Intent intent = new Intent(SignUpActivity.this, HomePageActivity.class);
-                                            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                                            startActivity(intent);
-
-                                        }
-                                    });
+                            Intent intent = new Intent(SignUpActivity.this, HomePageActivity.class);
+                            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                            startActivity(intent);
 
                         } else {
                             Toast.makeText(SignUpActivity.this, "Authentication failed.", Toast.LENGTH_SHORT).show();

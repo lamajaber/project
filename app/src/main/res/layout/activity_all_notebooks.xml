@@ -34,7 +34,7 @@
         app:layout_constraintTop_toBottomOf="@+id/Notebooks" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/booksRe"
+        android:id="@+id/RVNoteB"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="15dp"
