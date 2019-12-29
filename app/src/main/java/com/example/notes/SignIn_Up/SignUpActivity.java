@@ -39,7 +39,6 @@ public class SignUpActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
-        getSupportActionBar().hide();
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -47,63 +46,6 @@ public class SignUpActivity extends AppCompatActivity {
         Epass = findViewById(R.id.editU_pass);
 
 
-
-
-        findViewById(R.id.btn_signUp).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                email = Eemail.getEditText().getText().toString().trim();
-                password = Epass.getEditText().getText().toString().trim();
-
-                if (checkEmailPassword(email,password)) {
-
-
-                    Eemail.setPasswordVisibilityToggleDrawable(R.drawable.ic_done2);
-                    Epass.setPasswordVisibilityToggleDrawable(R.drawable.ic_done2);
-
-
-                    progressDialog = new ProgressDialog(SignUpActivity.this,
-                            R.style.AppTheme_Dark_Dialog);
-                    progressDialog.setIndeterminate(true);
-                    progressDialog.setMessage("Creating Account...");
-                    progressDialog.show();
-
-                    doSignUp(email, password);
-
-
-                }
-
-
-
-
-
-            }
-        });
-
-
-    }
-
-
-    private void doSignUp(String email, String password) {
-        mAuth.createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull final Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-
-
-                            Intent intent = new Intent(SignUpActivity.this, HomePageActivity.class);
-                            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                            startActivity(intent);
-
-                        } else {
-                            Toast.makeText(SignUpActivity.this, "Authentication failed.", Toast.LENGTH_SHORT).show();
-                     }
-
-                    }
-
-
-                });
     }
 
 

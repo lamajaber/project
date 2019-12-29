@@ -47,51 +47,6 @@ public class SignInActivity extends AppCompatActivity {
         Epass = findViewById(R.id.editI_pass);
 
 
-        findViewById(R.id.btn_signIn).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                email = Eemail.getEditText().getText().toString().trim();
-                password = Epass.getEditText().getText().toString().trim();
-
-
-                if (checkEmailPassword(email, password)) {
-                    progressDialog = new ProgressDialog(SignInActivity.this, R.style.AppTheme_Dark_Dialog);
-                    progressDialog.setIndeterminate(true);
-                    progressDialog.setMessage("Authenticating...");
-                    progressDialog.show();
-
-                    signIn(email, password);
-                }
-            }
-        });
-
-    }
-
-
-
-
-
-    private void signIn(String email, String password) {
-        mAuth.signInWithEmailAndPassword(email, password)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull final Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-
-                            FirebaseUser user = mAuth.getCurrentUser();
-
-
-                            Intent intent = new Intent(SignInActivity.this, HomePageActivity.class);
-                            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                            startActivity(intent);
-
-                        } else {
-                            Toast.makeText(SignInActivity.this, "Authentication failed.", Toast.LENGTH_SHORT).show();
-                        }
-
-                    }
-                });
     }
 
 
