@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="616dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="-100dp"
+        android:layout_marginTop="-88dp"
+        android:layout_marginRight="-90dp"
+        android:scaleType="center"
+        android:src="@drawable/splash" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="125.5dp"
+        android:layout_marginTop="51dp"
+        android:layout_marginRight="125.5dp"
+        android:text="Notebooks"
+        android:textColor="#7B1E58"
+        android:textSize="26dp" />
+
+    <TextView
+        android:layout_width="239dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="125.5dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="125.5dp"
+        android:text="Notebooks are the best place to manage your Notes "
+        android:textAlignment="center"
+        android:textColor="#9B9FAA"
+        android:textSize="18dp" />
+
+    <Button
+        android:id="@+id/btn_signInSplash"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="37.5dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/button"
+        android:text="Sign in"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="16dp" />
+
+    <Button
+        android:id="@+id/btn_signUpSplash"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="22dp"
+        android:background="@android:color/white"
+        android:text="Sign up"
+        android:textAllCaps="false"
+        android:textColor="#1A1824"
+        android:textSize="16dp" />
+
+</LinearLayout>

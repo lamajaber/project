@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="ConfirmMessageActivity">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="13dp"
+        android:src="@drawable/ic_close" />
+
+    <ImageView
+        android:layout_width="161dp"
+        android:layout_height="116dp"
+        android:src="@drawable/imgemail"
+        android:layout_gravity="center"
+        android:layout_marginTop="138dp"
+        android:layout_marginLeft="107dp"
+        android:layout_marginRight="107dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Check your email"
+        android:layout_marginTop="37dp"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        android:textColor="#1A1824"
+        android:layout_gravity="center"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="We’ve sent instructions on how to reset
+The password (also check the Spam folder)."
+        android:layout_marginTop="17dp"
+        android:layout_marginRight="43.5dp"
+        android:layout_marginLeft="43.5dp"
+        android:textSize="16dp"
+        android:textColor="#1A1824"
+        android:layout_gravity="center"/>
+
+
+
+    <Button
+        android:onClick="goEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="170dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/button"
+        android:text="Go to email"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="16dp" />
+
+
+</LinearLayout>
